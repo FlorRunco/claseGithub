@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*mobile first*/
+
+/*index*/
+
+body{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:bolder;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    display: grid;
+    justify-content: center;
+    background-color: coral;
+
+}
+
+
+h2{
+    color: aliceblue;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: flex;
+    display: flexbox;
+    float: right;
+    margin: 1rem;
+}
+
+.ad, article, aside{
+    color: yellow;
+    border:  3px solid white;
+}
+
+a{
+    color: yellow;
+    text-decoration: none;
+}
+
+p{
+    color: rgb(61, 17, 17)
+}
+
+footer{
+    padding: 25px;
+    background-color: darkgoldenrod;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+header{
+    grid-area: header;
+}
+
+.contenido{
+    grid-area: contenido;
+}
+
+nav{
+    grid-area: gridNav;
+}
+
+aside{
+    grid-area: aside;
+}
+
+.ad{
+    grid-area: ad;
+}
+
+.gridGaleria{
+    grid-area: gridGaleria;
+}
+
+footer{
+    grid-area: footer;
+}
+
+.gridBusquedas{
+    grid-area: gridBusquedas;
+}
+
+
+.grillaPrincipal{
+    background-color: darkgray;
+    margin-bottom: 1em;
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    "header"
+    "gridNav"
+    "contenido"
+    "aside"
+    "ad"
+    "gridGaleria"
+    "footer";
+}
+
+.galeria{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    gap:15px;
+}
+
+img{
+    border: 5px solid white;
+    margin-top: 15px;
+}
+
+/*tablet*/
+@media (min-width:500px) {
+    .grillaPrincipal{
+        margin:0;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas:
+        "header      header      header"
+        "gridNav         gridNav         gridNav"
+        "contenido   aside       aside"
+        " ad         ad          ad"
+        "gridGaleria gridGaleria gridGaleria"
+        "footer      footer      footer";
+    }
+}
+    
+
+
+/*AGREGAR MAS CAMBIOS ACA*/
+/*desktop*/
+@media (min-width:768px) {
+    .grillaPrincipal{
+        background-color: slategrey;
+        margin:0;
+        grid-template-columns: 1fr 2fr 1fr 2fr;
+        grid-template-areas:
+        "header      header      header       header"
+        "gridNav         gridNav         gridNav          nav"
+        "contenido   contenido   aside        aside"
+        " ad         ad          aside        aside"
+        "gridGaleria gridGaleria gridGaleria  gridGaleria"
+        "footer      footer      footer       footer";
+    }
+    
+}
+
+/*AGREGAR MAS CAMBIOS ACA*/
+
+@media (min-width:1024px) {
+    .grillaPrincipal{
+        background-color:black;
+        margin: 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "header      header      header       header  header"
+        "gridNav         gridNav         gridNav          nav     nav"
+        "contenido   contenido   aside        aside   aside"
+        " ad         ad          aside        aside   aside"
+        "gridGaleria gridGaleria gridGaleria  gridGaleria   gridGaleria"
+        "footer      footer      footer       footer  footer";
+    }
+}
+    
+
+/*AGREGAR MAS CAMBIOS ACA*/
+
+/*busquedas*/
+
